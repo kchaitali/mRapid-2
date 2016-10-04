@@ -1,0 +1,30 @@
+CREATE DATABASE IF NOT EXISTS opsmeta;
+
+USE opsmeta;
+
+CREATE TABLE IF NOT EXISTS job_execution_master(
+	job_id numeric,
+	job_execution_id int AUTO_INCREMENT,
+	PRIMARY KEY (job_execution_id),
+	FOREIGN KEY (job_id) REFERENCES (metaapp.job_master.job_id)
+);		
+
+CREATE TABLE IF NOT EXISTS job_execution_details(
+	job_execution_details_id int AUTO_INCREMENT,
+	job_execution_id int,
+	source_data_file_name varchar(50),
+	source_layout_file_name varchar(50),
+	source_data_file_location varchar(100),
+	source_layout_file_location varchar(100),
+	target_file_name varchar(50),
+	target_file_location varchar(100),
+	userid varchar(20),
+	job_start datetime,
+	job_end datetime,
+	job_result char(1),
+	job_comments varchar(100),
+	job_command varchar(100),
+	job_stage varchar(20),
+	PRIMARY KEY(job_execution_details_id),
+	FOREIGN KEY(job_execution_id) REFERENCES (job_execution_master.job_execution_id)
+);

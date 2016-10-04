@@ -1,0 +1,30 @@
+CREATE DATABASE IF NOT EXISTS metaapp;
+
+USE metaapp;
+
+CREATE TABLE IF NOT EXISTS job_master(
+	job_id numeric,
+	job_code varchar(50),
+	job_description varchar(100),
+	job_type char(10),
+	job_created_date date,
+	job_execution_status char(1)
+);
+
+CREATE TABLE IF NOT EXISTS job_details(
+	job_id numeric,
+	file_type varchar(20),
+	source_data_file_name varchar(50),
+	source_layout_file_name varchar(50),
+	source_data_file_location varchar(100),
+	source_layout_file_location varchar(100),
+	source_data_format varchar(20),
+	source_file_category varchar(20),
+	source_file_format varchar(20),
+	source_file_record_length int,
+	target_load_type varchar(10),
+	hdfs_file_name varchar(50),
+	hdfs_file_location varchar(100),
+	hive_table_name varchar(50),
+	hive_table_location varchar(100)	
+);
