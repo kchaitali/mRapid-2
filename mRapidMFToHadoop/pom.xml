@@ -64,7 +64,7 @@
 							<Class-Path>.</Class-Path>
 						</manifestEntries>
 				  </archive>
-					<finalName>lib/mRapidMFToHadoop</finalName>
+					<finalName>mRapidMFToHadoop</finalName>
 					<outputDirectory>${project.build.directory}/mrpd/scripts/data_ingestion_framework/ingestion/lib</outputDirectory>
 				  </configuration>
 			</plugin>
