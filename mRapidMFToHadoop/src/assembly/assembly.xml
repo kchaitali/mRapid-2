@@ -6,6 +6,7 @@
 	<formats>
 		<format>zip</format>
 		<format>tar</format>
+		<format>zip</format>
 	</formats>
 	<includeBaseDirectory>false</includeBaseDirectory>
 	<fileSets>
@@ -19,6 +20,10 @@
 		<fileSet>
 			<directory>resources</directory>
 			<outputDirectory>mRapid-scripts</outputDirectory>
+		</fileSet>
+		<fileSet>
+			<directory>resources/scripts/data_ingestion_framework</directory>
+			<outputDirectory>${project.build.directory}/mrpd/scripts</outputDirectory>
 		</fileSet>
 	</fileSets>
 </assembly>
