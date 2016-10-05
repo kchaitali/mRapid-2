@@ -50,6 +50,76 @@
 				</configuration>
 			</plugin>
       
+      <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+				  <archive>
+					<manifest>
+						<mainClass>com.capgemini.mf2hadoop.Mf2HadoopHDFS</mainClass>
+							<addClasspath>true</addClasspath>
+						<classpathPrefix>dependency-jars/</classpathPrefix>
+					</manifest>
+						<manifestEntries>
+							<Class-Path>.</Class-Path>
+						</manifestEntries>
+				  </archive>
+					<finalName>mRapid/mRapid</finalName>
+				  </configuration>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>copy-dependencies</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/mRapid/lib</outputDirectory>
+							<overWriteReleases>false</overWriteReleases>
+							<overWriteSnapshots>false</overWriteSnapshots>
+							<overWriteIfNewer>true</overWriteIfNewer>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>	
+			
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>copy-resources</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${basedir}/target/mrpd</outputDirectory>
+							<resources>
+								<resource>
+									<directory>resources</directory>
+									<filtering>true</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>		
     </plugins>
+    
+    <resources>
+    <resource>
+      <filtering>true</filtering><!-- if it is neccessary -->
+      <directory>${project.basedir}</directory><!-- from -->
+      <includes><!-- what -->
+        <include>resources\*.txt</include>
+      </includes>
+    </resource>
+  </resources>
+    
   </build>
 </project>
