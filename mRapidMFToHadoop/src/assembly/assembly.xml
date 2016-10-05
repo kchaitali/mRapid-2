@@ -22,5 +22,5 @@
 			<outputDirectory>mRapid-scripts</outputDirectory>
 		</fileSet>
 	</fileSets>
-	
 </assembly>
+<!-- test -->
