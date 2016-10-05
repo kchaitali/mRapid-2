@@ -75,7 +75,6 @@
 				  </archive>
 					<finalName>mRapidMFToHadoop</finalName>
 					<outputDirectory>${project.build.directory}/mrpd/scripts/data_ingestion_framework/ingestion/lib</outputDirectory>
-					<outputDirectory>${basedir}/target/</outputDirectory>
 				  </configuration>
 			</plugin>
 			
