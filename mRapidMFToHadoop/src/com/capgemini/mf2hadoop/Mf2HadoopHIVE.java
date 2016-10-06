@@ -80,7 +80,7 @@ public class Mf2HadoopHIVE {
 		System.out.println("mfDataFileName=[" + mfDataFileName + "]");
 		System.out.println("outputFileName=[" + outputFileName + "]");
 		System.out.println("tableLocation=[" + tablelocation + "]");
-		
+		System.out.println("test 1");
 	}
 
 	private static void printCommandError() {
