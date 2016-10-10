@@ -53,6 +53,7 @@ public class Mf2HadoopHIVE {
 		HiveCreateTableGenerator hiveCreateTableGenerator = new HiveCreateTableGenerator(); 
 		StringBuffer hiveCreateTableQuery= hiveCreateTableGenerator.generateCreateTableQuery(fieldList, tableName, comment, rowFormat, fieldsTerminatedBy, linesTerminatedBy, storedAs,tablelocation);
 		System.out.println(hiveCreateTableQuery);
+		System.out.println("test");
 		
 		
 		MFDataFileReaderWriter mfDataFileReaderWriter = new MFDataFileReaderWriter(mfDataFileName, outputFileName);
