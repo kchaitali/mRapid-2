@@ -3,7 +3,7 @@
   <groupId>mRapid</groupId>
   <artifactId>mRapid</artifactId>
 	<version>1.0</version>
-  <!-- h-->
+  <!-- test-->
   <dependencies>
 <dependency>
     <groupId>commons-io</groupId>
