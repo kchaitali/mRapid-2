@@ -1,9 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>mRapid</groupId>
-  <artifactId>mRapid</artifactId>
+  <groupId>mRapidMFToHadoop</groupId>
+  <artifactId>mRapidMFToHadoop</artifactId>
 	<version>1.0</version>
-  <!-- test 1-->
+	<name>mRapidMFToHadoop</name>
+<!-- test 1-->
   <dependencies>
 <dependency>
     <groupId>commons-io</groupId>
@@ -43,11 +44,11 @@
 				<artifactId>maven-assembly-plugin</artifactId>
 				<version>2.5.3</version>
 				<configuration>
-					<descriptors>
-						<descriptor>src/assembly/assembly.xml</descriptor>
-					</descriptors>
-					<tarLongFileMode>posix</tarLongFileMode>
-				</configuration>
+        <finalName>mRapid-1.0</finalName>
+        <descriptors>
+            <descriptor>src/assembly/assembly.xml</descriptor>
+        </descriptors>
+    </configuration>
 				<executions>
     <execution>
       <id>make-assembly</id> <!-- this is used for inheritance merges -->
@@ -74,7 +75,7 @@
 						</manifestEntries>
 				  </archive>
 					<finalName>mRapidMFToHadoop</finalName>
-					<outputDirectory>${project.build.directory}/data_ingestion_framework/ingestion/lib</outputDirectory>
+					<outputDirectory>${project.build.directory}/mRapid-scripts/data_ingestion_framework/ingestion/lib</outputDirectory>
 				  </configuration>
 			</plugin>
 			
