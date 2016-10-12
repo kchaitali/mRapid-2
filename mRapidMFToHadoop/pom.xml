@@ -16,7 +16,7 @@
     <artifactId>maven-compat</artifactId>
     <version>3.0.5</version>
     <scope>test</scope>
-</dependency>
+ </dependency>
 
 <!-- https://mvnrepository.com/artifact/com.spotify/docker-maven-plugin -->
 <dependency>
