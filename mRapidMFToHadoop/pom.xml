@@ -4,7 +4,7 @@
   <artifactId>mRapidMFToHadoop</artifactId>
 	<version>1.0</version>
 	<name>mRapidMFToHadoop</name>
-<!-- test 2-->
+<!-- test from eclipse-->
   <dependencies>
 <dependency>
     <groupId>commons-io</groupId>
