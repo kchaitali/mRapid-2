@@ -21,5 +21,13 @@
 			<outputDirectory>mRapid-scripts</outputDirectory>
 		</fileSet>
 	</fileSets>
+	
+	 <dependencySets>
+        <dependencySet>
+            <outputDirectory>mRapid-scripts/data_ingestion_framework/ingestion/lib</outputDirectory>
+            <scope>package</scope>
+        </dependencySet>
+    </dependencySets>
+	
 </assembly>
 <!-- test 5-->
