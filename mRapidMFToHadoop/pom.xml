@@ -20,11 +20,11 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/com.spotify/docker-maven-plugin -->
+		<!-- vt https://mvnrepository.com/artifact/com.spotify/docker-maven-plugin -->
 		<dependency>
 			<groupId>com.spotify</groupId>
 			<artifactId>docker-maven-plugin</artifactId>
-			<version>0.1.1</version>
+			   <version>0.1.1</version>
 		</dependency>
 
 	</dependencies>
